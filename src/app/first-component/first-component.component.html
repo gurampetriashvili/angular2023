@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<a routerLink="news" >News</a> &nbsp; &nbsp;&nbsp;
+<a (click)="navigateTo()" >Info form</a> &nbsp; &nbsp;&nbsp;
+<a routerLink="../contact" >Go back to contact</a>
+
+<router-outlet></router-outlet>
+
+<!-- 
+<p>first-component works!</p>
+
+<div> i have included this component </div>
+
+
+<button (click)="changeValue()">click me!</button>
+
+
+
+<div></div>
+
+
+<input>
+
+
+<div [ngStyle]="{'font-size': bigFont}">
+    <div>{{ isTrueOrFalse ? 'is true text' : 'is false text' }}</div>
+    <div>{{ someVariable }}</div>
+</div>
+
+
+<input
+ [ngClass]="customInputValue.length > 4 ? 'okText' : 'errorText'"
+ [value]="customInputValue" 
+ (keyup)="changeEventOnInput($event)"
+>
+
+
+
+<input [value]="customInputValue">
+<input [value]="customInputValue">
+
+<div *ngIf="customInputValue.length < 5"> we have an error</div>
+<div *ngIf="customInputValue.length > 4"> text is ok</div>
+
+
+<div style="margin-top: 100px;">
+
+    separate input
+    <label>{{ currentItem }}</label>
+    <input [(ngModel)]="currentItem">
+</div>
+
+
+<div [ngSwitch]="weekday">
+
+    <div *ngSwitchCase="1">monday</div>
+    <div *ngSwitchCase="2">tuesday</div>
+    <div *ngSwitchCase="3">wensday</div>
+    <div *ngSwitchCase="4">thursday</div>
+    <div *ngSwitchCase="5">friday</div>
+
+</div> -->
+
+<app-footer></app-footer>

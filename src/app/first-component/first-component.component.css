@@ -1,0 +1,9 @@
+.errorText {
+    font-size: 1.25em;
+    background-color: #ff0000;
+}
+
+.okText {
+    background-color: #00ff00;
+    font-size: 0.90em;
+}

@@ -1,0 +1,24 @@
+<p [appHighlight]="myColor">news works!</p>
+<p appHighlight>Other element with {{myText | uppercase}}</p>
+<div>my budge is {{myMoney | currency:'CAD'}} </div>
+<div>my budge is {{myMoney | number: '1.0'}} </div>
+
+<div>xarsixi cifris aris {{nubmerToPow | power:5}}</div>
+
+
+<div><button (click)="makeItpurple()">purple</button></div>
+
+<div></div>
+
+
+<button (click)="fetchNew()">Fetch latest news</button>
+
+<div *ngFor="let news of receivedNews; let i = index" [ngClass]="i %2 === 0 ? 'even' : 'odd'">
+    
+    {{i + 1}}<h1>{{news.title}}</h1>
+    <div *ngIf="i !== 2">{{news.text}}</div>
+    <a>{{news.url}}</a>
+    <div>
+        <button (click)="navigateTo(news.id)">Choose me!</button>
+    </div>
+</div>

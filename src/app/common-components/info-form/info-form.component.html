@@ -1,0 +1,42 @@
+<p>info form works</p>
+
+<img (click)="navigateTo('contact')" style="width: 100px;" src="https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_1280.png"> 
+
+<form [formGroup]="authorisationForm" (ngSubmit)="onTestClick()">
+    <input id="userName" type="text" formControlName="userName">
+    <input id="alias" type="text" formControlName="alias">
+    <div formGroupName="jobs">
+        <input id="firstJob" formControlName="first">
+        <input id="firstJob" formControlName="last">
+    </div>
+    <div formGroupName="ownedCars">
+        <div *ngFor="let ownedCar of getCarsForm.controls; let i = index">
+            enter car name: 
+            <input [formControlName]="i">
+        </div>
+        
+    </div>
+</form>
+
+
+<button (click)="addField()">add field</button>
+
+<div>
+    <button (click)="onTestClick()">click me</button>
+</div>
+
+<div>
+    is it valid: {{authorisationForm.status}}
+</div>
+
+
+
+
+
+
+<div *ngIf="chosenNews" style="border: 2px solid #ff0000">
+    chosen news 
+    <div>{{chosenNews.title}}</div>
+    <div>{{chosenNews.text}}</div>
+    <div>{{chosenNews.url}}</div>
+</div>
